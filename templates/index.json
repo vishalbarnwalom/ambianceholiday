@@ -137,7 +137,8 @@
         "slide_XnhMmB": {
           "type": "slide",
           "settings": {
-            "title": "Card Title",
+            "card_image": "shopify://shop_images/Luxury_Accommodations.png",
+            "title": "Airport Transfers & Car Rentals",
             "description": "<p>Add your description here</p>",
             "button_label": "Learn More",
             "button_link": "",
