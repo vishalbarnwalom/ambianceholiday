@@ -92,23 +92,11 @@
           "settings": {
             "text": "<p>From arrival to departure, we handle every aspect of your Mauritius experience with precision, passion, and local expertise that only comes from calling this paradise home.</p>"
           }
-        },
-        "button_AAdWdj": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
         }
       },
       "block_order": [
         "heading_wMFnbG",
-        "text_LGhk6z",
-        "button_AAdWdj"
+        "text_LGhk6z"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
