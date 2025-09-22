@@ -76,11 +76,56 @@
         "image3": "shopify://shop_images/image_1.png",
         "image4": "shopify://shop_images/Mauritius_luxury_accommodation.png"
       }
+    },
+    "rich_text_bzpKKD": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_wMFnbG": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Our Premium Services</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_LGhk6z": {
+          "type": "text",
+          "settings": {
+            "text": "<p>From arrival to departure, we handle every aspect of your Mauritius experience with precision, passion, and local expertise that only comes from calling this paradise home.</p>"
+          }
+        },
+        "button_AAdWdj": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_wMFnbG",
+        "text_LGhk6z",
+        "button_AAdWdj"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "custom_class": "",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "featured_collection",
     "customvideo_TyVFJK",
-    "section2_ELz77q"
+    "section2_ELz77q",
+    "rich_text_bzpKKD"
   ]
 }
