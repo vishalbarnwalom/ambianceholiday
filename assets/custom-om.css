@@ -1,0 +1,42 @@
+@media (min-width: 1024px) {
+  .customh .header:not(.drawer-menu).page-width {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+  }
+
+  .customh .header {
+      padding: 0 !important;
+  }
+
+  .customh .header__menu-item span {
+      color: #076283;
+      font-weight: 600;
+      font-size: 17px;
+  }
+}
+
+
+/* custom video section________________________ */
+.custom-video-heading {
+    font-size: 54px !important;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    margin-top: 10px !important;
+    font-weight: 700;
+    color: #FBBF24;
+}
+.custom-video-overline {
+    font-size: 27px !important;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    letter-spacing: .05em;
+    opacity: .9;
+}
+
+.custom-video-description {
+    font-size: 21px !important;
+}
+
+/* -----------------custom class rich text------------------------------------------ */
+
+.crt

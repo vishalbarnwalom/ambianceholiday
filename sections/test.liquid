@@ -1,0 +1,32 @@
+<div>
+  <h1>{{ section.settings.textt }}</h1>
+  {% if section.settings.image %}
+    <img src="{{ section.settings.image | image_url }}" alt="Test Image">
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "test",
+  "tag": "section",
+ 
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "textt",
+      "label": "Write your text",
+      "default": "<p>I am Vishal</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Upload Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "test"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,196 @@
+.scroll {
+  text-align: center;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.scroll p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.scroll img {
+  display: inline-block;
+  margin-top: 10px;
+  height: 20px;
+  width: 20px;
+  animation: bounce 1.5s infinite;
+}
+
+/* Upar–niche move hone ka animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+}
+
+/* ______________________________________________________________ */
+.custom-video-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+.custom-video-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.custom-video-wrapper:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+.custom-video-player,
+.custom-video-fallback {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.custom-video-content {
+  position: relative;
+  z-index: 3; /* overlay ke upar */
+  text-align: center;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.custom-video-overline {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  opacity: 0.9;
+}
+
+.custom-video-heading {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.custom-video-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.custom-video-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.custom-video-button {
+  min-width: 180px;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.custom-video-button-primary {
+  background-color: #FFA500;
+  color: #076283 !important;
+}
+
+.custom-video-button-primary:hover {
+  background-color: #FF8C00;
+  color: #ffffff !important;
+}
+
+.custom-video-button-secondary {
+  background-color: white;
+  border: 2px solid #ffffff;
+  color: #076283 !important;
+}
+
+.custom-video-button-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff !important;
+}
+
+/* 📱 Mobile Styles */
+@media screen and (max-width: 768px) {
+  .custom-video-section {
+    min-height: 420px;
+    padding: 1rem; /* safe padding */
+  }
+
+  .custom-video-content {
+    padding: 1rem;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .custom-video-overline {
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .custom-video-heading {
+    font-size: 1.6rem;
+    line-height: 1.3;
+    margin-bottom: 0.8rem;
+    word-break: break-word;
+  }
+
+  .custom-video-description {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 1.2rem;
+    padding: 0 0.5rem;
+  }
+
+  .custom-video-buttons {
+    flex-direction: column;
+    gap: 0.7rem;
+    width: 100%;
+  }
+
+  .custom-video-button {
+    width: 100%;
+    min-width: unset;
+    padding: 0.7rem 1rem;
+    font-size: 0.9rem;
+  }
+}

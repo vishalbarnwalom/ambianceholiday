@@ -2385,7 +2385,7 @@ input[type='checkbox'] {
 
   .header--middle-left {
     grid-template-areas: 'heading navigation icons';
-    grid-template-columns: auto auto 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     column-gap: 2rem;
   }
 
@@ -2534,6 +2534,7 @@ input[type='checkbox'] {
 .header__icon .svg-wrapper {
   width: 44px;
   height: 44px;
+  color: #076283;
 }
 
 .header__icon::after {

@@ -1,0 +1,204 @@
+{{ 'section-card-slider.css' | asset_url | stylesheet_tag }}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+<div class="card-slider-section page-width{% if section.settings.custom_class != blank %} {{ section.settings.custom_class }}{% endif %}">
+  <div class="card-slider-nav">
+    {% if section.settings.show_dots %}
+      <div class="custom-owl-dots"></div>
+    {% endif %}
+    {% if section.settings.show_arrows %}
+      <div class="custom-owl-nav">
+        <button type="button" class="owl-prev" aria-label="Previous">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
+            <path d="M10 1L4 7.5L10 14" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </button>
+        <button type="button" class="owl-next" aria-label="Next">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
+            <path d="M5 1L11 7.5L5 14" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </button>
+      </div>
+    {% endif %}
+  </div>
+
+  <div class="card-slider owl-carousel">
+    {%- for block in section.blocks -%}
+      <div class="card-slide" {{ block.shopify_attributes }}>
+        {% if block.settings.card_image != blank %}
+          <div class="card-image-wrapper">
+            <img
+              srcset="{%- if block.settings.card_image.width >= 165 -%}{{ block.settings.card_image | image_url: width: 165 }} 165w,{%- endif -%}
+                {%- if block.settings.card_image.width >= 360 -%}{{ block.settings.card_image | image_url: width: 360 }} 360w,{%- endif -%}
+                {%- if block.settings.card_image.width >= 535 -%}{{ block.settings.card_image | image_url: width: 535 }} 535w,{%- endif -%}
+                {%- if block.settings.card_image.width >= 750 -%}{{ block.settings.card_image | image_url: width: 750 }} 750w,{%- endif -%}"
+              src="{{ block.settings.card_image | image_url: width: 535 }}"
+              sizes="(min-width: 990px) 535px, (min-width: 750px) 535px, calc(100vw - 30px)"
+              alt="{{ block.settings.card_image.alt | escape }}"
+              height="{{ block.settings.card_image.height }}"
+              width="{{ block.settings.card_image.width }}"
+              loading="lazy"
+              class="card-image"
+            >
+          </div>
+        {% endif %}
+        <div class="card-content">
+          {% if block.settings.icon != blank %}
+            <img 
+              src="{{ block.settings.icon | image_url: width: 50 }}"
+              alt="{{ block.settings.title | escape }}"
+              class="card-icon"
+              width="50"
+              height="50"
+              loading="lazy"
+            >
+          {% endif %}
+          <h3 class="card-title">{{ block.settings.title }}</h3>
+          <div class="card-description">{{ block.settings.description }}</div>
+          {% if block.settings.button_label != blank %}
+            <div class="card-button-wrapper">
+              <a href="{{ block.settings.button_link | default: '#' }}" class="card-button">
+                {{ block.settings.button_label }}
+                {% if block.settings.show_arrow %}
+                  <span class="button-arrow">→</span>
+                {% endif %}
+              </a>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+
+<script>
+  $(document).ready(function(){
+    var $owl = $('.card-slider');
+    $owl.owlCarousel({
+      loop: true,
+      margin: 30,
+      nav: true,
+      dots: true,
+      navText: ['<span>&lt;</span>', '<span>&gt;</span>'],
+      dotsEach: true,
+      smartSpeed: 500,
+      responsive: {
+        0: {
+          items: 1,
+          nav: true,
+          dots: true
+        },
+        768: {
+          items: 2,
+          nav: true
+        },
+        990: {
+          items: 3,
+          nav: true
+        }
+      }
+    });
+
+    // Force dots to be visible
+    $('.owl-dots').css('display', 'flex');
+    
+    // Custom Navigation Events
+    $(document).on('click', '.owl-prev', function() {
+      $owl.trigger('prev.owl.carousel');
+    });
+    $(document).on('click', '.owl-next', function() {
+      $owl.trigger('next.owl.carousel');
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Card Slider",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_arrows",
+      "label": "Show navigation arrows",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_dots",
+      "label": "Show navigation dots",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Custom CSS Class"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "card_image",
+          "label": "Card Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Card Title"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description",
+          "default": "<p>Add your description here</p>"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button Label",
+          "default": "Learn More"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_arrow",
+          "label": "Show arrow after button",
+          "default": true
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Card Slider",
+      "blocks": [
+        {
+          "type": "slide"
+        },
+        {
+          "type": "slide"
+        },
+        {
+          "type": "slide"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
