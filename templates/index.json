@@ -52,10 +52,35 @@
         "button_text_link_2": "",
         "custom_class": ""
       }
+    },
+    "section2_ELz77q": {
+      "type": "section2",
+      "name": "Mauritius Section",
+      "settings": {
+        "heading": "Your Gateway to Authentic Mauritius",
+        "description": "<p>At Ambiance Holidays, we believe that travel should be transformative. Founded by passionate locals with deep roots in Mauritius, we specialize in creating bespoke experiences that go beyond the ordinary tourist trail.<br/><br/>Our intimate knowledge of the island, combined with our commitment to personalized service, ensures that every journey we craft reflects your unique desires and creates lasting memories.</p>",
+        "btn1_text": "Our Story",
+        "btn1_link": "",
+        "btn2_text": "Meet Our Team",
+        "btn2_link": "",
+        "stat1_number": "15+",
+        "stat1_text": "Years Experience",
+        "stat2_number": "10,000+",
+        "stat2_text": "Happy Travelers",
+        "stat3_number": "50+",
+        "stat3_text": "Unique Experiences",
+        "stat4_number": "98%",
+        "stat4_text": "Satisfaction Rate",
+        "image1": "shopify://shop_images/Mauritius_cultural_experience.png",
+        "image2": "shopify://shop_images/Mauritius_underwater_adventure.png",
+        "image3": "shopify://shop_images/image_1.png",
+        "image4": "shopify://shop_images/Mauritius_luxury_accommodation.png"
+      }
     }
   },
   "order": [
     "featured_collection",
-    "customvideo_TyVFJK"
+    "customvideo_TyVFJK",
+    "section2_ELz77q"
   ]
 }
