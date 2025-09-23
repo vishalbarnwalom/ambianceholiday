@@ -158,55 +158,6 @@
         "custom_class": ""
       }
     },
-    "card_slider_cBbYYB": {
-      "type": "card-slider",
-      "blocks": {
-        "slide_QLYLPg": {
-          "type": "slide",
-          "settings": {
-            "card_image": "shopify://shop_images/Airport_Transfers_Car_Rentals_1.png",
-            "title": "Activities & Guided Tours",
-            "description": "<p>Seamless arrival and departure experiences<br/>with our premium fleet of vehicles and professional drivers.</p><p></p><ul><li>24/7 availability</li><li>sLuxury vehicle fleet</li><li>sLuxury vehicle fleet</li></ul>",
-            "button_label": "Learn More",
-            "button_link": "",
-            "show_arrow": true
-          }
-        },
-        "slide_PPjAfr": {
-          "type": "slide",
-          "settings": {
-            "card_image": "shopify://shop_images/Activities_Guided_Tours.png",
-            "title": "Card Luxury Accommodations",
-            "description": "<p>Seamless arrival and departure experiences<br/>with our premium fleet of vehicles and professional drivers.</p><p></p><ul><li>24/7 availability</li><li>sLuxury vehicle fleet</li><li>sLuxury vehicle fleet</li></ul>",
-            "button_label": "Learn More",
-            "button_link": "",
-            "show_arrow": true
-          }
-        },
-        "slide_H3maaC": {
-          "type": "slide",
-          "settings": {
-            "card_image": "shopify://shop_images/Luxury_Accommodations.png",
-            "title": "Airport Transfers & Car Rentals",
-            "description": "<p>Seamless arrival and departure experiences<br/>with our premium fleet of vehicles and professional drivers.</p><p></p><ul><li>24/7 availability</li><li>sLuxury vehicle fleet</li><li>sLuxury vehicle fleet</li></ul>",
-            "button_label": "Learn More",
-            "button_link": "",
-            "show_arrow": true
-          }
-        }
-      },
-      "block_order": [
-        "slide_QLYLPg",
-        "slide_PPjAfr",
-        "slide_H3maaC"
-      ],
-      "name": "Card Slider",
-      "settings": {
-        "show_arrows": true,
-        "show_dots": true,
-        "custom_class": ""
-      }
-    },
     "rich_text_gVaNH9": {
       "type": "rich-text",
       "blocks": {
@@ -392,6 +343,55 @@
         "padding_top": 40,
         "padding_bottom": 52,
         "custom_class": "crt"
+      }
+    },
+    "card_slider_cBbYYB": {
+      "type": "card-slider",
+      "blocks": {
+        "slide_QLYLPg": {
+          "type": "slide",
+          "settings": {
+            "card_image": "shopify://shop_images/Sunset_Catamaran_Cruise.png",
+            "title": "Sunset Catamaran Cruise",
+            "description": "<p>Sail into the golden hour with champagne and canapés while dolphins dance long side your catamaran.</p>",
+            "button_label": "Learn More",
+            "button_link": "",
+            "show_arrow": true
+          }
+        },
+        "slide_PPjAfr": {
+          "type": "slide",
+          "settings": {
+            "card_image": "shopify://shop_images/Coral_Reef_Diving_Experience.png",
+            "title": "Coral Reef Diving Experience",
+            "description": "<p>Discover vibrant underwater worlds with<br/>certified instructors in crystal-clear <br/>lagoons.</p>",
+            "button_label": "Learn More",
+            "button_link": "",
+            "show_arrow": true
+          }
+        },
+        "slide_H3maaC": {
+          "type": "slide",
+          "settings": {
+            "card_image": "shopify://shop_images/Mountain_Hiking_Waterfall_Trek.png",
+            "title": "Mountain Hiking & Waterfall Trek",
+            "description": "<p>Traverse lush tropical landscapes to hidden waterfalls with breathtaking panoramic views.</p>",
+            "button_label": "Learn More",
+            "button_link": "",
+            "show_arrow": true
+          }
+        }
+      },
+      "block_order": [
+        "slide_QLYLPg",
+        "slide_PPjAfr",
+        "slide_H3maaC"
+      ],
+      "name": "Card Slider",
+      "settings": {
+        "show_arrows": true,
+        "show_dots": true,
+        "custom_class": ""
       }
     }
   },
