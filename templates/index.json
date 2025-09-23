@@ -200,13 +200,57 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "column_VtcjEw": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/shock.svg",
+            "title": "<strong>Flexibility</strong>",
+            "text": "<p>Plans change? No problem. We adapt<br/>quickly to ensure your experience<br/>remains seamless and enjoyable.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_cRQgXj": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Component_1_2.svg",
+            "title": "<strong>Stress-Free</strong>",
+            "text": "<p>From planning to execution, we<br/>handle every detail so you can focus<br/>on creating memories that last a<br/>lifetime.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_hxxqJ7": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Component_1_3.svg",
+            "title": "<strong>Passion Meets Detail</strong>",
+            "text": "<p>Our love for Mauritius drives our<br/>meticulous attention to every aspect<br/>of your journey, no matter how small.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_mdK7RM": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Component_1_4.svg",
+            "title": "<strong>Proven Excellence</strong>",
+            "text": "<p>Award-winning service recognized by<br/>industry leaders and loved by<br/>thousands of satisfied travelers.</p>",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
         "column_EYMwE7",
         "column_qy7pN3",
         "column_dte9zr",
-        "column_fLhC6J"
+        "column_fLhC6J",
+        "column_VtcjEw",
+        "column_cRQgXj",
+        "column_hxxqJ7",
+        "column_mdK7RM"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
