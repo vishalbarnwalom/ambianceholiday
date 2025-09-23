@@ -312,6 +312,38 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "rich_text_BMwJPc": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_kVhxkD": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Featured Experiences</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_bRcfPi": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Handpicked adventures that showcase the very best of Mauritius. Each experience is<br/>carefully curated to create unforgettable memories.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_kVhxkD",
+        "text_bRcfPi"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "custom_class": "crt"
+      }
     }
   },
   "order": [
@@ -322,6 +354,7 @@
     "card_slider_BgByYc",
     "rich_text_gVaNH9",
     "multicolumn_JedMAm",
-    "custom_liquid_NErdgw"
+    "custom_liquid_NErdgw",
+    "rich_text_BMwJPc"
   ]
 }
