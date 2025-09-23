@@ -157,6 +157,61 @@
         "show_dots": true,
         "custom_class": ""
       }
+    },
+    "multicolumn_JedMAm": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_EYMwE7": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Component_1.svg",
+            "title": "<strong>Local Expertise</strong>",
+            "text": "<p>Born and raised in Mauritius, we knowevery hidden gem, cultural nuance,and authentic experience the islandoffers.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_qy7pN3": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>Bespoke Service</strong>",
+            "text": "<p>Every itinerary is crafted uniquely for you, reflecting your interests, pace, and dreams for the perfect getaway.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_dte9zr": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>Exclusive Rates</strong>",
+            "text": "<p>Our strong local partnerships ensure you get the best value and access to exclusive deals unavailable elsewhere.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_EYMwE7",
+        "column_qy7pN3",
+        "column_dte9zr"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Multicolumn",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "Button label",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -164,6 +219,7 @@
     "customvideo_TyVFJK",
     "section2_ELz77q",
     "rich_text_bzpKKD",
-    "card_slider_BgByYc"
+    "card_slider_BgByYc",
+    "multicolumn_JedMAm"
   ]
 }
