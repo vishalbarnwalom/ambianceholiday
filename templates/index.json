@@ -176,7 +176,7 @@
           "settings": {
             "image": "shopify://shop_images/heartsvg.svg",
             "title": "<strong>Bespoke Service</strong>",
-            "text": "<p>Every itinerary is crafted uniquely for you, reflecting your interests, pace, and dreams for the perfect getaway.</p>",
+            "text": "<p>Every itinerary is crafted uniquely for you, reflecting your interests and dreams for the perfect getaway.</p>",
             "link_label": "",
             "link": ""
           }
