@@ -38,7 +38,7 @@
           "type": "text",
           "settings": {
             "heading": "<strong>Contact Info</strong>",
-            "subtext": ""
+            "subtext": "<ul><li>123 Royal Road, Grand Baie Mauritius, 30501</li><li>+230 5259 5750</li><li>WhatsApp: +23052595750</li><li>info@ambianceholidays.mu</li><li>24/7 Support for guests</li></ul><p></p>"
           }
         }
       },
