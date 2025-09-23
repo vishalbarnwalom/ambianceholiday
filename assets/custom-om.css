@@ -39,4 +39,54 @@
 
 /* -----------------custom class rich text------------------------------------------ */
 
-.crt
+.crt .rich-text__heading {
+  color: #076283 !important;
+}
+
+
+/* -----------------custom multicolumn ----------------------------------------------------- */
+.cmc .multicolumn-card {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;   
+  justify-content: center;
+  text-align: center;   
+}
+
+.cmc .multicolumn-card__image-wrapper {
+  margin-bottom: 5px; 
+}
+
+.cmc .multicolumn-card__image-wrapper {
+  width: 56px !important;
+  height: 56px !important;
+  border-radius: 50% !important;
+  background: #fff !important;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+.cmc .multicolumn-card__image-wrapper .media {
+  padding-bottom: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  background: transparent !important;
+}
+
+.cmc .multicolumn-card__image-wrapper img {
+  width: 25px !important;
+  height: 25px !important;
+  object-fit: contain;
+  display: block;
+}
+
+.cmc h3.inline-richtext {
+    color: #076283;
+}
