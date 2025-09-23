@@ -158,6 +158,55 @@
         "custom_class": ""
       }
     },
+    "card_slider_cBbYYB": {
+      "type": "card-slider",
+      "blocks": {
+        "slide_QLYLPg": {
+          "type": "slide",
+          "settings": {
+            "card_image": "shopify://shop_images/Airport_Transfers_Car_Rentals_1.png",
+            "title": "Activities & Guided Tours",
+            "description": "<p>Seamless arrival and departure experiences<br/>with our premium fleet of vehicles and professional drivers.</p><p></p><ul><li>24/7 availability</li><li>sLuxury vehicle fleet</li><li>sLuxury vehicle fleet</li></ul>",
+            "button_label": "Learn More",
+            "button_link": "",
+            "show_arrow": true
+          }
+        },
+        "slide_PPjAfr": {
+          "type": "slide",
+          "settings": {
+            "card_image": "shopify://shop_images/Activities_Guided_Tours.png",
+            "title": "Card Luxury Accommodations",
+            "description": "<p>Seamless arrival and departure experiences<br/>with our premium fleet of vehicles and professional drivers.</p><p></p><ul><li>24/7 availability</li><li>sLuxury vehicle fleet</li><li>sLuxury vehicle fleet</li></ul>",
+            "button_label": "Learn More",
+            "button_link": "",
+            "show_arrow": true
+          }
+        },
+        "slide_H3maaC": {
+          "type": "slide",
+          "settings": {
+            "card_image": "shopify://shop_images/Luxury_Accommodations.png",
+            "title": "Airport Transfers & Car Rentals",
+            "description": "<p>Seamless arrival and departure experiences<br/>with our premium fleet of vehicles and professional drivers.</p><p></p><ul><li>24/7 availability</li><li>sLuxury vehicle fleet</li><li>sLuxury vehicle fleet</li></ul>",
+            "button_label": "Learn More",
+            "button_link": "",
+            "show_arrow": true
+          }
+        }
+      },
+      "block_order": [
+        "slide_QLYLPg",
+        "slide_PPjAfr",
+        "slide_H3maaC"
+      ],
+      "name": "Card Slider",
+      "settings": {
+        "show_arrows": true,
+        "show_dots": true,
+        "custom_class": ""
+      }
+    },
     "rich_text_gVaNH9": {
       "type": "rich-text",
       "blocks": {
@@ -355,6 +404,7 @@
     "rich_text_gVaNH9",
     "multicolumn_JedMAm",
     "custom_liquid_NErdgw",
-    "rich_text_BMwJPc"
+    "rich_text_BMwJPc",
+    "card_slider_cBbYYB"
   ]
 }
