@@ -236,7 +236,7 @@
           "settings": {
             "image": "shopify://shop_images/Component_1_4.svg",
             "title": "<strong>Proven Excellence</strong>",
-            "text": "<p>Award-winning service recognized by<br/>industry leaders and loved by thousands of satisfied travelers.</p>",
+            "text": "<p>Award-winning service recognized by<br/>industry leaders and loved by  travelers.</p>",
             "link_label": "",
             "link": ""
           }
