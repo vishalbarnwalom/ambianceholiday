@@ -69,14 +69,14 @@
         "heading_mYWYaX": {
           "type": "heading",
           "settings": {
-            "heading": "Subscribe to our emails",
+            "heading": "<strong>Stay Updated with Paradise</strong>",
             "heading_size": "h1"
           }
         },
         "paragraph_rTizMQ": {
           "type": "paragraph",
           "settings": {
-            "text": "<p>Be the first to know about new collections and exclusive offers.</p>"
+            "text": "<p>Get exclusive travel tips, special offers, and discover hidden gems in Mauritius. Join our<br/>community of travelers.</p>"
           }
         },
         "email_form_jXiatG": {
