@@ -354,9 +354,9 @@
             "card_image": "shopify://shop_images/Sunset_Catamaran_Cruise.png",
             "title": "Sunset Catamaran Cruise",
             "description": "<p>Sail into the golden hour with champagne and canapés while dolphins dance long side your catamaran.</p>",
-            "button_label": "Learn More",
+            "button_label": "Book Experience",
             "button_link": "",
-            "show_arrow": true
+            "show_arrow": false
           }
         },
         "slide_PPjAfr": {
@@ -365,9 +365,9 @@
             "card_image": "shopify://shop_images/Coral_Reef_Diving_Experience.png",
             "title": "Coral Reef Diving Experience",
             "description": "<p>Discover vibrant underwater worlds with<br/>certified instructors in crystal-clear <br/>lagoons.</p>",
-            "button_label": "Learn More",
+            "button_label": "Book Experience",
             "button_link": "",
-            "show_arrow": true
+            "show_arrow": false
           }
         },
         "slide_H3maaC": {
@@ -376,9 +376,9 @@
             "card_image": "shopify://shop_images/Mountain_Hiking_Waterfall_Trek.png",
             "title": "Mountain Hiking & Waterfall Trek",
             "description": "<p>Traverse lush tropical landscapes to hidden waterfalls with breathtaking panoramic views.</p>",
-            "button_label": "Learn More",
+            "button_label": "Book Experience",
             "button_link": "",
-            "show_arrow": true
+            "show_arrow": false
           }
         }
       },
