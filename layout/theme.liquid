@@ -298,22 +298,6 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
-    <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const btn = document.getElementById("contact-button");
-    const formWrapper = document.getElementById("contact-form-wrapper");
-
-    if (btn && formWrapper) {
-      btn.addEventListener("click", function(e) {
-        e.preventDefault();
-        formWrapper.style.display = (formWrapper.style.display === "none" || formWrapper.style.display === "") 
-          ? "block" 
-          : "none";
-      });
-    }
-  });
-</script>
-
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
