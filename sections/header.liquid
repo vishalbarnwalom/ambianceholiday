@@ -15,6 +15,19 @@
 {%- if section.settings.menu_type_desktop == 'mega' -%}
   <link rel="stylesheet" href="{{ 'component-mega-menu.css' | asset_url }}" media="print" onload="this.media='all'">
 {%- endif -%}
+<div id="YoFK74aArungvlPViEvhCA" class="contact-popup" style="display: none;">
+  <div class="contact-popup__inner">
+    <span class="contact-popup__close" onclick="closeContactPopup()">×</span>
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</div>
+
 
 <style>
   header-drawer {
@@ -319,13 +332,11 @@
         </div>
       {% endif %}
 
-   {% if section.settings.contact_button_link != blank %}
- <a href="javascript:void(0);" class="header__contact-button button" onclick="openContactModal()">
-  {{ section.settings.contact_button_text | default: 'Contact Us' }}
-</a>
-
-{% endif %}
-
+      {% if section.settings.contact_button_link != blank %}
+        <a href="{{ section.settings.contact_button_link }}" class="header__contact-button button">
+          {{ section.settings.contact_button_text | default: 'Contact Us' }}
+        </a>
+      {% endif %}
     </div>
   </header>
 </{{ header_tag }}>
@@ -337,16 +348,6 @@
   -%}
 {%- endif -%}
 
-<script>
-  function openContactModal() {
-    const modal = document.getElementById('YoFK74aArungvlPViEvhCA');
-    if (modal) {
-      modal.style.display = 'block';
-    } else {
-      console.log("Modal element not found");
-    }
-  }
-</script>
 {% javascript %}
   class StickyHeader extends HTMLElement {
     constructor() {
