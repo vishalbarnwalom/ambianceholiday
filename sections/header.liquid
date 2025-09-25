@@ -320,9 +320,10 @@
       {% endif %}
 
    {% if section.settings.contact_button_link != blank %}
-  <a href="#YoFK74aArungvlPViEvhCA" class="header__contact-button button">
-    {{ section.settings.contact_button_text | default: 'Contact Us' }}
-  </a>
+ <a href="javascript:void(0);" onclick="document.getElementById('YoFK74aArungvlPViEvhCA').style.display='block'" class="header__contact-button button">
+  {{ section.settings.contact_button_text | default: 'Contact Us' }}
+</a>
+
 {% endif %}
 
     </div>
