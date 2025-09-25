@@ -7,7 +7,6 @@
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
 
-
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
     {%- endif -%}
@@ -299,25 +298,6 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
-    <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const btn = document.getElementById("contact-button");
-    const formDiv = document.getElementById("YoFK74aArungvlPViEvhCA");
-
-    if (btn && formDiv) {
-      btn.addEventListener("click", function(e) {
-        e.preventDefault();
-        // Toggle show/hide
-        if (formDiv.style.display === "none" || formDiv.style.display === "") {
-          formDiv.style.display = "block";
-        } else {
-          formDiv.style.display = "none";
-        }
-      });
-    }
-  });
-</script>
-
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
