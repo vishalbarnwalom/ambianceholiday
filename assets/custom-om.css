@@ -92,5 +92,5 @@
     color: #076283;
 }
  .product__media-list .media img {
-    inset: 0 !important;
+    inset: 0 ;
 }
