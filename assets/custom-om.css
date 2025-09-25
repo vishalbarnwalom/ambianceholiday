@@ -91,3 +91,6 @@
 .cmc h3.inline-richtext {
     color: #076283;
 }
+.product-media-container .product__media-list .media img {
+    inset: 0 !important;
+}
