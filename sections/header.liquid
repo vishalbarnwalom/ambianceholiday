@@ -320,7 +320,7 @@
       {% endif %}
 
    {% if section.settings.contact_button_link != blank %}
- <a href="javascript:void(0);" onclick="document.getElementById('YoFK74aArungvlPViEvhCA').style.display='block'" class="header__contact-button button">
+ <a href="javascript:void(0);" class="header__contact-button button" onclick="openContactModal()">
   {{ section.settings.contact_button_text | default: 'Contact Us' }}
 </a>
 
@@ -337,6 +337,16 @@
   -%}
 {%- endif -%}
 
+<script>
+  function openContactModal() {
+    const modal = document.getElementById('YoFK74aArungvlPViEvhCA');
+    if (modal) {
+      modal.style.display = 'block';
+    } else {
+      console.log("Modal element not found");
+    }
+  }
+</script>
 {% javascript %}
   class StickyHeader extends HTMLElement {
     constructor() {
