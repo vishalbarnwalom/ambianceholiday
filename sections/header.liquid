@@ -320,14 +320,15 @@
       {% endif %}
 
       {% if section.settings.contact_button_link != blank %}
-  <a href="javascript:void(0)" id="contact-button" class="header__contact-button button">
-    {{ section.settings.contact_button_text | default: 'Contact Us' }}
-  </a>
-{% endif %}
+       <a href="javascript:void(0)" id="contact-button" class="header__contact-button button">
+  {{ section.settings.contact_button_text | default: 'Contact Us' }}
+</a>
+
 <!-- Hidden Form Wrapper -->
-<div id="contact-form-wrapper" style="display:none; margin:0 auto;">
+<div id="contact-form-wrapper" style="display:none; margin:0 auto; position:absolute; top:80px; left:50%; transform:translateX(-50%); z-index:999; background:#fff; padding:20px; border:1px solid #ddd; border-radius:10px;">
   <div class="pxFormGenerator" id="YoFK74aArungvlPViEvhCA"></div>
 </div>
+      {% endif %}
     </div>
   </header>
 </{{ header_tag }}>
@@ -338,22 +339,6 @@
     desktop_menu_type: section.settings.menu_type_desktop
   -%}
 {%- endif -%}
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const btn = document.getElementById("contact-button");
-    const formWrapper = document.getElementById("contact-form-wrapper");
-
-    if (btn && formWrapper) {
-      btn.addEventListener("click", function() {
-        if (formWrapper.style.display === "none") {
-          formWrapper.style.display = "block";
-        } else {
-          formWrapper.style.display = "none";
-        }
-      });
-    }
-  });
-</script>
 
 {% javascript %}
   class StickyHeader extends HTMLElement {
