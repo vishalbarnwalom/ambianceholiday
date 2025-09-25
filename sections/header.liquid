@@ -348,6 +348,18 @@
     desktop_menu_type: section.settings.menu_type_desktop
   -%}
 {%- endif -%}
+<script>
+  function openContactPopup() {
+    const popup = document.getElementById('YoFK74aArungvlPViEvhCA');
+    if (popup) popup.style.display = 'block';
+  }
+
+  function closeContactPopup() {
+    const popup = document.getElementById('YoFK74aArungvlPViEvhCA');
+    if (popup) popup.style.display = 'none';
+  }
+</script>
+
 
 {% javascript %}
   class StickyHeader extends HTMLElement {
