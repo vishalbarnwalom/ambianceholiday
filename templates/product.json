@@ -79,6 +79,24 @@
             "page": ""
           }
         },
+        "collapsible_tab_76xadp": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How To Use",
+            "icon": "none",
+            "content": "<p>Using Electrolit is simple and quick!<strong>Tear open a packet, add it to 16 fl oz of water,</strong>and stir until fully mixed. Enjoy immediate hydration that replenishes your body with essential electrolytes.<br/></p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_WKyei4": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Ingredients",
+            "icon": "none",
+            "content": "<p>Dextrose, Sodium Citrate, Citric Acid, Potassium Chloride, Natural Flavor, Natural Grape Flavor, Calcium Citrate, Dipotassium Phosphate, Silicon Dioxide, Magnesium Citrate, Steviol Glycosides, Sodium Chloride, FD&C Red No. 40, FD&C Blue No. <a href=\"#\" title=\"#\">1.<strong>View Nutrition Facts</strong></a></p>",
+            "page": ""
+          }
+        },
         "description": {
           "type": "description",
           "disabled": true,
@@ -101,6 +119,8 @@
         "wishlist_hero_custom_product_button_bRyHU9",
         "collapsible_tab_9VTVD6",
         "collapsible_tab_yBPxcr",
+        "collapsible_tab_76xadp",
+        "collapsible_tab_WKyei4",
         "description",
         "share"
       ],
