@@ -319,11 +319,14 @@
         </div>
       {% endif %}
 
-      {% if section.settings.contact_button_link != blank %}
-        <a href="{{ section.settings.contact_button_link }}" class="header__contact-button button">
-          {{ section.settings.contact_button_text | default: 'Contact Us' }}
-        </a>
-      {% endif %}
+     {% if section.settings.contact_button_link != blank %}
+  <a href="javascript:void(0)" 
+     id="openFormBtn" 
+     class="header__contact-button button">
+    {{ section.settings.contact_button_text | default: 'Contact Us' }}
+  </a>
+{% endif %}
+
     </div>
   </header>
 </{{ header_tag }}>
