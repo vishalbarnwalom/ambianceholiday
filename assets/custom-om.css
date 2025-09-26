@@ -101,3 +101,10 @@
         padding: 30px !important;
         border-radius: 20px !important;
     }
+
+        .product--large:not(.product--no-media) .product__media-wrapper {
+        /* max-width: 65%; */
+        /* width: calc(65% - var(--grid-desktop-horizontal-spacing) / 2); */
+        width: 53.889% !important;
+        max-width: 53.889% !important;
+    }
