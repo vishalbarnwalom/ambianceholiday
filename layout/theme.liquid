@@ -375,7 +375,7 @@
     {%- if settings.cart_type == 'drawer' -%}
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-     {% comment %} <div id="formModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+     <div id="formModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%;
       background:rgba(0,0,0,0.6); z-index:9999;">
 
           <div style="background:#fff; margin:5% auto; padding:20px; width:80%; max-width:600px; height:80vh; position:relative; border-radius:8px;">
@@ -385,8 +385,7 @@
             <!-- Hulk Form -->
                <div class="pxFormGenerator" id="DysLt9cr7BCeCAkfdPEhLw"></div>
                 </div>
-         </div> {% endcomment %}
-           <div class="pxFormGenerator" id="DysLt9cr7BCeCAkfdPEhLw"></div>
+         </div>
            <script>
   document.addEventListener("DOMContentLoaded", function() {
     var openBtn = document.getElementById("openFormBtn");
