@@ -38,6 +38,52 @@
       }
     }
   {%- endstyle -%}
+  {%- comment -%}
+  Paste this near the top of your product template/section file
+  Replace namespace/key if you used something else.
+{%- endcomment -%}
+
+{%- assign accent = product.metafields.custom.accent_color | default: '#ff0000' -%}
+
+{%- comment -%}
+  Make sure accent contains a valid CSS color (best: hex like #ff0000).
+  The style block below will only be output on product pages.
+{%- endcomment -%}
+
+<style>
+  /* Set a CSS variable for this page */
+  :root { --product-accent: {{ accent }}; }
+
+  /* Header background (some common selectors) */
+  header, .site-header, .header {
+    background-color: var(--product-accent) !important;
+  }
+
+  /* Header links / buttons contrast — override if needed */
+  header a, .site-header a, .header a {
+    color: #fff !important; /* adjust if you want dark text */
+  }
+
+  /* Product title / price / buttons */
+  .product-single__title,
+  .product__title,
+  .product__heading,
+  h1.product-title,
+  .product-price,
+  .price, 
+  .product-form__button,
+  .btn--primary,
+  .btn {
+    color: var(--product-accent) !important;
+    border-color: var(--product-accent) !important;
+  }
+
+  .product-form__button, .btn--primary, .btn {
+    background-color: var(--product-accent) !important;
+    color: #fff !important;
+  }
+</style>
+
 
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
