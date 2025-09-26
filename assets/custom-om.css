@@ -108,3 +108,10 @@
         width: 53.889% !important;
         max-width: 53.889% !important;
     }
+        .product--large:not(.product--no-media) .product__info-wrapper {
+        /* padding: 0 0 0 4rem; */
+        /* max-width: 35%; */
+        /* width: calc(35% - var(--grid-desktop-horizontal-spacing) / 2); */
+        width: calc(100% - 53.889%) !important;
+        max-width: calc(100% - 53.889%) !important;
+    }
