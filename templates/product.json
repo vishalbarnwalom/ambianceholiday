@@ -61,8 +61,27 @@
             "addedContainerStyles": ""
           }
         },
+        "collapsible_tab_9VTVD6": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Discription",
+            "icon": "none",
+            "content": "<p><strong>Instant Hydration:</strong> whether at the beach, after happy hour, or post-pilates, Electrolit Electrolyte Powder provides quick, convenient hydration.</p><p><strong>Premium ingredients, great taste:</strong> with high grade glucose as a sweetener, this delicious electrolyte powder helps you feel your best after a long day, heat exposure, or physical activity.</p><p><strong>Recovery benefits:</strong> packed with Magnesium, Sodium, Potassium, Chloride and Calcium, Electrolit’s science-backed formula restores hydration and boosts recovery.</p><p><strong>Quick and convenient:</strong> travel-friendly packets fit into your busy schedule, providing rapid hydration anytime, anywhere. Perfect for your gym bag, purse, or travel kit.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_yBPxcr": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Benefits",
+            "icon": "none",
+            "content": "<ul><li>Hydrate fast and boost recovery</li><li>Achieve optimal bodily function</li><li>Reduce muscle cramping and soreness</li><li>Support physical performance</li><li>Elevate energy levels<br/><br/></li></ul>",
+            "page": ""
+          }
+        },
         "description": {
           "type": "description",
+          "disabled": true,
           "settings": {}
         },
         "share": {
@@ -80,6 +99,8 @@
         "quantity_selector",
         "buy_buttons",
         "wishlist_hero_custom_product_button_bRyHU9",
+        "collapsible_tab_9VTVD6",
+        "collapsible_tab_yBPxcr",
         "description",
         "share"
       ],
