@@ -322,16 +322,17 @@
           </div>
         {%- endif -%}
       </a>
-      <div class="cart-info-text">
+            <div class="cart-info-text">
   <div class="cart-title">Shopping Cart</div>
-  <div class="cart-total">
+  <p class="cart-total">
     {% if cart != empty %}
-     <p class="totals__total-value">{{ cart.total_price | money_with_currency }}</p>
+      {{ cart.total_price | money_with_currency }}
     {% else %}
       No items yet
     {% endif %}
-  </div>
+  </p>
 </div>
+
 
     </div>
   </header>
