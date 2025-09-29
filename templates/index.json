@@ -422,6 +422,10 @@
         "show_dots": true,
         "custom_class": ""
       }
+    },
+    "pagefly-home": {
+      "type": "pagefly-home",
+      "settings": {}
     }
   },
   "order": [
@@ -435,6 +439,7 @@
     "multicolumn_JedMAm",
     "custom_liquid_NErdgw",
     "rich_text_BMwJPc",
-    "card_slider_cBbYYB"
+    "card_slider_cBbYYB",
+    "pagefly-home"
   ]
 }
