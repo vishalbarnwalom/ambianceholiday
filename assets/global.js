@@ -1331,28 +1331,41 @@ class CartPerformance {
   }
 }
 
-function updateCartTotal() {
-  fetch('/cart.js')
-    .then(res => res.json())
-    .then(cart => {
-      const cartTotalEl = document.querySelector('.cart-total');
-      if (cartTotalEl) {
-        if (cart.item_count > 0) {
-          cartTotalEl.textContent = Shopify.formatMoney(cart.total_price, "{{ shop.money_format }}");
-        } else {
-          cartTotalEl.textContent = "No items yet";
-        }
-      }
-    })
-    .catch(err => console.error('Cart total update error:', err));
+// Custom formatMoney function for Dawn theme
+function formatMoney(cents, format = "{{amount}}") {
+  if (typeof cents === "string") {
+    cents = cents.replace(".", "");
+  }
+
+  let value = "";
+  let placeholderRegex = /\{\{\s*(\w+)\s*\}\}/;
+
+  function formatWithDelimiters(number, precision = 2, thousands = ",", decimal = ".") {
+    if (isNaN(number) || number == null) return 0;
+
+    number = (number / 100.0).toFixed(precision);
+
+    let parts = number.split(".");
+    let dollars = parts[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1" + thousands);
+    let centsPart = parts[1] ? (decimal + parts[1]) : "";
+
+    return dollars + centsPart;
+  }
+
+  switch (format.match(placeholderRegex)[1]) {
+    case "amount":
+      value = formatWithDelimiters(cents, 2);
+      break;
+    case "amount_no_decimals":
+      value = formatWithDelimiters(cents, 0);
+      break;
+    case "amount_with_comma_separator":
+      value = formatWithDelimiters(cents, 2, ".", ",");
+      break;
+    case "amount_no_decimals_with_comma_separator":
+      value = formatWithDelimiters(cents, 0, ".", ",");
+      break;
+  }
+
+  return format.replace(placeholderRegex, value);
 }
-
-// Dawn ke add-to-cart ke baad cart drawer hamesha update hota hai
-document.addEventListener('DOMContentLoaded', () => {
-  document.body.addEventListener('product:added', updateCartTotal);   // product form se add hua
-  document.body.addEventListener('cart:updated', updateCartTotal);   // kabhi kabhi Dawn ye fire karta hai
-  document.body.addEventListener('ajaxProduct:added', updateCartTotal); // kuch older Dawn versions
-});
-
-// Page load hone par bhi update call
-updateCartTotal();
