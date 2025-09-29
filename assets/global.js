@@ -1330,3 +1330,21 @@ class CartPerformance {
     );
   }
 }
+
+// Listen for Dawn's cart update event
+document.addEventListener('cart:updated', () => {
+  fetch('/cart.js')
+    .then(res => res.json())
+    .then(cart => {
+      const cartTotalEl = document.querySelector('.cart-total');
+      if (cartTotalEl) {
+        if (cart.item_count > 0) {
+          // Format money using Shopify's helper
+          cartTotalEl.textContent = Shopify.formatMoney(cart.total_price, "{{ shop.money_format }}");
+        } else {
+          cartTotalEl.textContent = "No items yet";
+        }
+      }
+    })
+    .catch(err => console.error('Cart update error:', err));
+});

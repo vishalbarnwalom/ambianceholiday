@@ -296,23 +296,7 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
-    <script>
-      document.addEventListener('cart:updated', function (event) {
-  fetch('/cart.js')
-    .then(res => res.json())
-    .then(cart => {
-      const cartTotalEl = document.querySelector('.cart-total');
-      if (cartTotalEl) {
-        if (cart.item_count > 0) {
-          cartTotalEl.textContent = Shopify.formatMoney(cart.total_price, "{{ shop.money_format }}");
-        } else {
-          cartTotalEl.textContent = "No items yet";
-        }
-      }
-    });
-});
-
-      </script>
+   
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
