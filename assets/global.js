@@ -1348,7 +1348,7 @@ function formatMoney(cents) {
   return currencySymbol + formatWithDelimiters(cents, 2);
 }
 
-// 🔄 Update header cart total
+// header cart price
 function updateHeaderCartTotal() {
   fetch('/cart.js')
     .then(res => res.json())
@@ -1365,7 +1365,7 @@ function updateHeaderCartTotal() {
     .catch(err => console.error('Cart total update error:', err));
 }
 
-// 🛒 Observe cart drawer updates for header sync
+
 document.addEventListener('DOMContentLoaded', () => {
   const drawer = document.querySelector('cart-drawer');
 
