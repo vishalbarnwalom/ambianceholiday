@@ -1331,3 +1331,51 @@ class CartPerformance {
   }
 }
 
+// Shopify Dawn style money formatter
+function formatMoney(cents, format = "{{ amount }}") {
+  if (typeof cents === "string") cents = cents.replace(".", "");
+
+  function formatWithDelimiters(number, precision = 2, thousands = ",", decimal = ".") {
+    if (isNaN(number) || number == null) return 0;
+    number = (number / 100.0).toFixed(precision);
+    let parts = number.split(".");
+    let dollars = parts[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1" + thousands);
+    let centsPart = parts[1] ? decimal + parts[1] : "";
+    return dollars + centsPart;
+  }
+
+  return formatWithDelimiters(cents, 2);
+}
+
+// Update header cart total dynamically
+function updateHeaderCartTotal() {
+  fetch('/cart.js')
+    .then(res => res.json())
+    .then(cart => {
+      const cartTotalEl = document.querySelector('.cart-total');
+      if (cartTotalEl) {
+        if (cart.item_count > 0) {
+          cartTotalEl.textContent = formatMoney(cart.total_price, "{{ shop.money_format }}");
+        } else {
+          cartTotalEl.textContent = "No items yet";
+        }
+      }
+    })
+    .catch(err => console.error('Cart total update error:', err));
+}
+
+// Hook into Dawn's cart updates
+document.addEventListener('DOMContentLoaded', () => {
+  const drawer = document.querySelector('cart-drawer');
+
+  if (drawer) {
+    const observer = new MutationObserver(() => {
+      updateHeaderCartTotal();
+    });
+
+    observer.observe(drawer, { childList: true, subtree: true });
+  }
+
+  // Also run once on page load
+  updateHeaderCartTotal();
+});
