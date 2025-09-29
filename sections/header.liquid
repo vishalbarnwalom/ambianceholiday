@@ -301,7 +301,17 @@
           </div>
         {%- endif -%}
       </a>
-      <div>Hello</div>
+      <!-- Cart Icon ke Right Side me Text -->
+<div class="cart-info-text">
+  <div class="cart-title">Shopping Cart</div>
+  {% if cart != empty %}
+    <div class="cart-total">
+      {{ cart.total_price | money }}
+    </div>
+  {% else %}
+    <div class="cart-total">No items yet</div>
+  {% endif %}
+</div>
     </div>
   </header>
 </{{ header_tag }}>
