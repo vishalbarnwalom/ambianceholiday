@@ -1331,8 +1331,8 @@ class CartPerformance {
   }
 }
 
-// Shopify Dawn style money formatter
-function formatMoney(cents, format = "{{ amount }}") {
+// 💰 Format cents to currency string
+function formatMoney(cents) {
   if (typeof cents === "string") cents = cents.replace(".", "");
 
   function formatWithDelimiters(number, precision = 2, thousands = ",", decimal = ".") {
@@ -1344,10 +1344,11 @@ function formatMoney(cents, format = "{{ amount }}") {
     return dollars + centsPart;
   }
 
-  return formatWithDelimiters(cents, 2);
+  const currencySymbol = window.shopCurrency || "";
+  return currencySymbol + formatWithDelimiters(cents, 2);
 }
 
-// Update header cart total dynamically
+// 🔄 Update header cart total
 function updateHeaderCartTotal() {
   fetch('/cart.js')
     .then(res => res.json())
@@ -1355,7 +1356,7 @@ function updateHeaderCartTotal() {
       const cartTotalEl = document.querySelector('.cart-total');
       if (cartTotalEl) {
         if (cart.item_count > 0) {
-          cartTotalEl.textContent = formatMoney(cart.total_price, "{{ shop.money_format }}");
+          cartTotalEl.textContent = formatMoney(cart.total_price);
         } else {
           cartTotalEl.textContent = "No items yet";
         }
@@ -1364,7 +1365,7 @@ function updateHeaderCartTotal() {
     .catch(err => console.error('Cart total update error:', err));
 }
 
-// Hook into Dawn's cart updates
+// 🛒 Observe cart drawer updates for header sync
 document.addEventListener('DOMContentLoaded', () => {
   const drawer = document.querySelector('cart-drawer');
 
@@ -1372,10 +1373,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer = new MutationObserver(() => {
       updateHeaderCartTotal();
     });
-
     observer.observe(drawer, { childList: true, subtree: true });
   }
 
-  // Also run once on page load
+  // Run once on page load
   updateHeaderCartTotal();
 });
+
