@@ -1332,7 +1332,7 @@ class CartPerformance {
 }
 
 // Shopify Dawn style money formatter
-function formatMoney(cents, format = "{{ amount }} {{ currency }}" ) {
+function formatMoney(cents, format = "{{ amount }}") {
   if (typeof cents === "string") cents = cents.replace(".", "");
 
   function formatWithDelimiters(number, precision = 2, thousands = ",", decimal = ".") {
@@ -1344,10 +1344,7 @@ function formatMoney(cents, format = "{{ amount }} {{ currency }}" ) {
     return dollars + centsPart;
   }
 
-  // currency from shop settings injected via Liquid
-  const currency = "{{ shop.currency }}";
-
-  return formatWithDelimiters(cents, 2) + " " + currency;
+  return formatWithDelimiters(cents, 2);
 }
 
 // Update header cart total dynamically
