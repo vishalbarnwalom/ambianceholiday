@@ -1331,20 +1331,28 @@ class CartPerformance {
   }
 }
 
-// Listen for Dawn's cart update event
-document.addEventListener('cart:updated', () => {
+function updateCartTotal() {
   fetch('/cart.js')
     .then(res => res.json())
     .then(cart => {
       const cartTotalEl = document.querySelector('.cart-total');
       if (cartTotalEl) {
         if (cart.item_count > 0) {
-          // Format money using Shopify's helper
           cartTotalEl.textContent = Shopify.formatMoney(cart.total_price, "{{ shop.money_format }}");
         } else {
           cartTotalEl.textContent = "No items yet";
         }
       }
     })
-    .catch(err => console.error('Cart update error:', err));
+    .catch(err => console.error('Cart total update error:', err));
+}
+
+// Dawn ke add-to-cart ke baad cart drawer hamesha update hota hai
+document.addEventListener('DOMContentLoaded', () => {
+  document.body.addEventListener('product:added', updateCartTotal);   // product form se add hua
+  document.body.addEventListener('cart:updated', updateCartTotal);   // kabhi kabhi Dawn ye fire karta hai
+  document.body.addEventListener('ajaxProduct:added', updateCartTotal); // kuch older Dawn versions
 });
+
+// Page load hone par bhi update call
+updateCartTotal();
