@@ -256,43 +256,68 @@
           font-size: 1.6rem;
         }
       }
-      #floating-cart-widget {
+   #floating-cart-widget {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #0abb33;
+  background: #28a745; /* green background */
   color: white;
   border-radius: 50px;
-  padding: 10px 15px;
+  padding: 8px 12px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   cursor: pointer;
   z-index: 9999;
+  min-width: 180px; /* fix width for balance */
 }
 
-#floating-cart-widget .cart-content {
+#floating-cart-widget .cart-images {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 #floating-cart-widget .cart-images img {
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
-  margin-left: -10px;
   border: 2px solid white;
+  margin-left: -12px;
+  object-fit: cover;
 }
+
 #floating-cart-widget .cart-info {
   display: flex;
   flex-direction: column;
+  line-height: 1.2;
+  font-size: 13px;
+  flex: 1;
+}
+
+#floating-cart-widget .cart-title {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+#floating-cart-widget .cart-count {
   font-size: 12px;
+  opacity: 0.9;
 }
+
 #floating-cart-widget .cart-arrow {
-  font-size: 18px;
-  margin-left: 5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #0d6e1d; /* dark green circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  margin-left: auto;
 }
+
 
     {% endstyle %}
 
@@ -337,6 +362,7 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
+    {% comment %} solid cart button on home page-----------------------------------------------------------------------------------------------> {% endcomment %}
     <script>
       document.addEventListener("DOMContentLoaded", function() {
   function loadCartData() {
@@ -379,6 +405,7 @@
 });
 
     </script>
+    {% comment %} solid button end here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> {% endcomment %}
   {% include 'pagefly-app-header' %}</head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
