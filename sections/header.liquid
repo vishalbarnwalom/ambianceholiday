@@ -326,7 +326,7 @@
   <div class="cart-title">Shopping Cart</div>
   <div class="cart-total">
     {% if cart != empty %}
-      {{ cart.total_price | money }}
+     <p class="totals__total-value">{{ cart.total_price | money_with_currency }}</p>
     {% else %}
       No items yet
     {% endif %}
