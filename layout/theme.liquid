@@ -497,6 +497,89 @@
     });
   });
      </script>
+     <script>
+// Add to Cart
+function addToCart(button) {
+  const variantId = button.getAttribute('data-variant-id');
+  if (!variantId) {
+    alert('Please select a product variant');
+    return;
+  }
+
+  button.classList.add('loading');
+
+  const formData = {
+    items: [{ id: variantId, quantity: 1 }]
+  };
+
+  fetch('/cart/add.js', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(formData)
+  })
+  .then(res => res.json())
+  .then(data => {
+    button.classList.remove('loading');
+
+    // Success message
+    const msg = document.getElementById('cartSuccessMessage');
+    if (msg) {
+      msg.classList.add('show');
+      setTimeout(() => msg.classList.remove('show'), 3000);
+    }
+
+    // Update cart count
+    updateCartCount();
+  })
+  .catch(err => {
+    console.error(err);
+    button.classList.remove('loading');
+    alert('Error adding to cart');
+  });
+}
+
+// Buy Now
+function buyNow(button) {
+  const variantId = button.getAttribute('data-variant-id');
+  if (!variantId) {
+    alert('Please select a product variant');
+    return;
+  }
+
+  button.classList.add('loading');
+
+  const formData = {
+    items: [{ id: variantId, quantity: 1 }]
+  };
+
+  fetch('/cart/add.js', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(formData)
+  })
+  .then(res => res.json())
+  .then(data => {
+    window.location.href = '/checkout';
+  })
+  .catch(err => {
+    console.error(err);
+    button.classList.remove('loading');
+    alert('Error processing order');
+  });
+}
+
+// Update Cart Count (optional)
+function updateCartCount() {
+  fetch('/cart.js')
+    .then(res => res.json())
+    .then(cart => {
+      document.querySelectorAll('.cart-count').forEach(el => {
+        el.textContent = cart.item_count;
+      });
+    });
+}
+</script>
+
      <div id="floating-cart-widget" style="display:none;">
   <div class="cart-content">
     <div class="cart-images" id="cart-images"></div>
