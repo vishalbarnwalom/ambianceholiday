@@ -167,8 +167,13 @@
         "disabled": false,
         "settings": {}
       },
-      "pagefly-page-builder": {
-        "type": "shopify://apps/pagefly-page-builder/blocks/app-embed/83e179f7-59a0-4589-8c66-c0dddf959200",
+      "2997326909215316540": {
+        "type": "shopify://apps/ang-extra-menu/blocks/embed-app/ec904fae-fd98-4243-8db5-01051f1af95f",
+        "disabled": false,
+        "settings": {}
+      },
+      "14006543868794036723": {
+        "type": "shopify://apps/ang-extra-menu/blocks/metadata/ec904fae-fd98-4243-8db5-01051f1af95f",
         "disabled": false,
         "settings": {}
       }
