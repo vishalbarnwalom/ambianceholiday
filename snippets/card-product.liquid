@@ -287,35 +287,7 @@
               {% endif %}
             {%- endif -%}
           </div>
-       <!-- Buttons Section -->
-<div class="product-buttons-wrapper">
-  <!-- Add to Cart -->
-  <button 
-    type="button" 
-    class="product-btn add-to-cart-btn"
-    data-product-id="{{ card_product.id }}"
-    data-variant-id="{{ card_product.selected_or_first_available_variant.id }}"
-    onclick="addToCart(this)"
-  >
-    <svg class="cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <path d="M9 2L7 6M17 2l2 4M3 6h18l-2 13H5L3 6z"/>
-      <circle cx="9" cy="21" r="1"/>
-      <circle cx="17" cy="21" r="1"/>
-    </svg>
-    Add to Cart
-  </button>
-
-  <!-- Buy Now -->
-  <button 
-    type="button" 
-    class="product-btn buy-now-btn"
-    data-product-id="{{ card_product.id }}"
-    data-variant-id="{{ card_product.selected_or_first_available_variant.id }}"
-    onclick="buyNow(this)"
-  >
-    Buy Now
-  </button>
-</div>
+          
         </div>
         {% assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id %}
         {% if quick_add == 'standard' %}
