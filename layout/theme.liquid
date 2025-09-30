@@ -381,7 +381,10 @@
 
     </script>
     {% comment %} solid button end here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> {% endcomment %}
-  {% include 'pagefly-app-header' %}</head>
+  {% include 'pagefly-app-header' %}
+  {% include "huk-mega-menu-pro" %}
+  </head>
+							
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
