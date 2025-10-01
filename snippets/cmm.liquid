@@ -1,184 +1,184 @@
 <style>
-  /* Mega Menu Base */
-  .mega-nav {
-    position: relative;
-  }
+.mega-menu-wrapper {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  display: none;
+  background: #fff;
+  z-index: 100;
+  height: 600px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
 
-  .mega-nav > ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 30px;
-  }
+.nav-item:hover .mega-menu-wrapper {
+  display: flex;
+}
 
-  .mega-nav > ul > li {
-    position: relative;
-  }
+.mega-menu-inner {
+  display: grid;
+  grid-template-columns: 300px 1fr 1fr; /* left, middle, right */
+  width: 100%;
+  height: 100%;
+}
 
-  .mega-nav > ul > li > a {
-    display: block;
-    padding: 12px 15px;
-    text-decoration: none;
-    font-weight: 600;
-    color: #111;
-  }
+/* Left scroll panel */
+.mega-left {
+  overflow-y: auto;
+  border-right: 1px solid #eee;
+  padding: 20px;
+}
 
-  .mega-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    display: none;
-    background: #fff;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    z-index: 50;
-    padding: 20px;
-  }
+.mega-left ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-  /* Show on hover */
-  .mega-nav > ul > li:hover .mega-menu {
-    display: flex;
-  }
+.mega-left li {
+  padding: 10px 5px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
 
-  .mega-menu-content {
-    display: grid;
-    grid-template-columns: 70% 30%;
-    gap: 20px;
-    width: 100%;
-    max-height: 500px;
-  }
+.mega-left li:hover {
+  background: #f9f9f9;
+}
 
-  /* Left side scroll */
-  .mega-menu-left {
-    overflow-y: auto;
-    max-height: 500px;
-    padding-right: 10px;
-  }
+/* Sub menu middle panel */
+.mega-middle {
+  padding: 20px;
+  border-right: 1px solid #eee;
+  display: none;
+}
 
-  .mega-menu-left h4 {
-    font-size: 16px;
-    font-weight: bold;
-    margin: 10px 0 5px;
-  }
+.mega-middle.active {
+  display: block;
+}
 
-  .mega-menu-left ul {
-    margin: 0 0 15px 0;
-    padding: 0;
-    list-style: none;
-  }
+.mega-middle h4 {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  font-weight: bold;
+}
 
-  .mega-menu-left ul li a {
-    display: block;
-    padding: 4px 0;
-    font-size: 14px;
-    color: #333;
-    text-decoration: none;
-  }
+.mega-middle ul {
+  list-style: none;
+  padding: 0;
+}
 
-  .mega-menu-left ul li a:hover {
-    color: #d10024;
-  }
+.mega-middle li {
+  margin: 6px 0;
+}
 
-  /* Right side image */
-  .mega-menu-right img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 6px;
-  }
+.mega-middle li a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #333;
+}
+
+.mega-middle li a:hover {
+  color: #d10024;
+}
+
+/* Right image panel */
+.mega-right {
+  padding: 20px;
+}
+
+.mega-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 </style>
 
-<nav class="mega-nav">
+<nav class="custom-mega-nav">
   <ul>
-    <!-- Mens -->
-    <li>
-      <a href="#">Mens</a>
-      <div class="mega-menu">
-        <div class="mega-menu-content">
-          <div class="mega-menu-left">
-            <h4>Winter Wear</h4>
+    <!-- MEN -->
+    <li class="nav-item">
+      <a href="#">Man</a>
+      <div class="mega-menu-wrapper">
+        <div class="mega-menu-inner">
+          <!-- LEFT -->
+          <div class="mega-left">
             <ul>
-              <li><a href="/collections/mens-winter-polo">Polo Shirt</a></li>
-              <li><a href="/collections/mens-winter-jacket">Jackets</a></li>
-              <li><a href="/collections/mens-winter-coat">Coats</a></li>
-            </ul>
-
-            <h4>Tshirts</h4>
-            <ul>
-              <li><a href="/collections/mens-tshirt-graphic">Graphic Tee</a></li>
-              <li><a href="/collections/mens-tshirt-basic">Basic Tee</a></li>
-            </ul>
-
-            <h4>Jeans</h4>
-            <ul>
-              <li><a href="/collections/mens-jeans-skinny">Skinny Fit</a></li>
-              <li><a href="/collections/mens-jeans-regular">Regular Fit</a></li>
+              <li data-target="winter">Winter Wear</li>
+              <li data-target="summer">Summer Wear</li>
+              <li data-target="tshirt">Tshirts</li>
+              <li data-target="jeans">Jeans</li>
             </ul>
           </div>
-          <div class="mega-menu-right">
-            <img src="{{ 'mens-banner.jpg' | asset_url }}" alt="Mens Banner">
+
+          <!-- MIDDLE (Sub collections) -->
+          <div class="mega-middle" id="winter">
+            <h4>Winter Wear</h4>
+            <ul>
+              <li><a href="/collections/mens-puffer">Puffer Jackets</a></li>
+              <li><a href="/collections/mens-hoodie">Hoodies</a></li>
+              <li><a href="/collections/mens-coats">Coats</a></li>
+            </ul>
+          </div>
+
+          <div class="mega-middle" id="summer">
+            <h4>Summer Wear</h4>
+            <ul>
+              <li><a href="/collections/mens-shorts">Shorts</a></li>
+              <li><a href="/collections/mens-linen">Linen Shirts</a></li>
+            </ul>
+          </div>
+
+          <div class="mega-middle" id="tshirt">
+            <h4>Tshirts</h4>
+            <ul>
+              <li><a href="/collections/mens-polo">Polo</a></li>
+              <li><a href="/collections/mens-oversized">Oversized</a></li>
+            </ul>
+          </div>
+
+          <div class="mega-middle" id="jeans">
+            <h4>Jeans</h4>
+            <ul>
+              <li><a href="/collections/mens-skinny">Skinny Fit</a></li>
+              <li><a href="/collections/mens-regular">Regular Fit</a></li>
+            </ul>
+          </div>
+
+          <!-- RIGHT -->
+          <div class="mega-right">
+            <img src="https://cdn.your-image-link.jpg" alt="Mens Banner">
           </div>
         </div>
       </div>
     </li>
 
-    <!-- Womens -->
-    <li>
-      <a href="#">Womens</a>
-      <div class="mega-menu">
-        <div class="mega-menu-content">
-          <div class="mega-menu-left">
-            <h4>Dresses</h4>
-            <ul>
-              <li><a href="/collections/womens-party-dress">Party Wear</a></li>
-              <li><a href="/collections/womens-casual-dress">Casual Dress</a></li>
-            </ul>
-
-            <h4>Tops</h4>
-            <ul>
-              <li><a href="/collections/womens-tops-crop">Crop Tops</a></li>
-              <li><a href="/collections/womens-tops-blouse">Blouses</a></li>
-            </ul>
-          </div>
-          <div class="mega-menu-right">
-            <img src="{{ 'womens-banner.jpg' | asset_url }}" alt="Womens Banner">
-          </div>
-        </div>
-      </div>
+    <!-- WOMEN -->
+    <li class="nav-item">
+      <a href="#">Woman</a>
+      <!-- same structure like MEN (left + middle + right) -->
     </li>
 
     <!-- 24/7 -->
-    <li>
+    <li class="nav-item">
       <a href="#">24/7</a>
-      <div class="mega-menu">
-        <div class="mega-menu-content">
-          <div class="mega-menu-left">
-            <h4>Everyday Wear</h4>
-            <ul>
-              <li><a href="/collections/247-hoodie">Hoodies</a></li>
-              <li><a href="/collections/247-joggers">Joggers</a></li>
-            </ul>
-          </div>
-          <div class="mega-menu-right">
-            <img src="{{ '247-banner.jpg' | asset_url }}" alt="24/7 Banner">
-          </div>
-        </div>
-      </div>
+      <!-- same structure -->
     </li>
   </ul>
 </nav>
 
 <script>
-  // Optional JS – agar tum click toggle chahte ho hover ki jagah
-  document.querySelectorAll('.mega-nav > ul > li > a').forEach(item => {
-    item.addEventListener('click', e => {
-      e.preventDefault();
-      const parent = item.parentElement;
-      parent.classList.toggle('open');
-      document.querySelectorAll('.mega-nav > ul > li').forEach(li => {
-        if (li !== parent) li.classList.remove('open');
+  // Show sub-collections on hover
+  document.querySelectorAll('.mega-left li').forEach(item => {
+    item.addEventListener('mouseenter', () => {
+      // hide all middle panels
+      document.querySelectorAll('.mega-middle').forEach(panel => {
+        panel.classList.remove('active');
       });
+      // show the one linked
+      const target = item.getAttribute('data-target');
+      document.getElementById(target)?.classList.add('active');
     });
   });
 </script>
