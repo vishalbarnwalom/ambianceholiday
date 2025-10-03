@@ -209,7 +209,7 @@
   {% render 'customsearchbar' %}
 {%- else -%}
   {%- if section.settings.menu_type_desktop == 'dropdown' -%}
-    {%- render 'header-dropdown-menu' -%}
+   {% render 'customsearchbar' %}
   {%- elsif section.settings.menu_type_desktop != 'drawer' -%}
     {%- render 'header-mega-menu' -%}
   {%- endif -%}
