@@ -213,7 +213,24 @@
     {%- render 'header-mega-menu' -%}
   {%- endif -%}
 {%- else -%}
-  {%- render 'header-search', input_id: 'Header-Search' -%}
+  <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
+    <div class="field">
+      <input
+        class="search__input field__input"
+        id="Header-Search"
+        type="search"
+        name="q"
+        value="{{ search.terms | escape }}"
+        placeholder="{{ 'general.search.search' | t }}"
+      >
+      <label class="field__label" for="Header-Search">{{ 'general.search.search' | t }}</label>
+      <button class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
+        <span class="svg-wrapper">
+          {{- 'icon-search.svg' | inline_asset_content -}}
+        </span>
+      </button>
+    </div>
+  </form>
 {%- endif -%}
 
       
