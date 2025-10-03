@@ -207,30 +207,12 @@
     {%- endif -%}
 
   {%- if section.settings.menu != blank -%}
+  {% render 'customsearchbar' %}
   {%- if section.settings.menu_type_desktop == 'dropdown' -%}
     {%- render 'header-dropdown-menu' -%}
   {%- elsif section.settings.menu_type_desktop != 'drawer' -%}
     {%- render 'header-mega-menu' -%}
   {%- endif -%}
-{%- else -%}
-  <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
-    <div class="field">
-      <input
-        class="search__input field__input"
-        id="Header-Search"
-        type="search"
-        name="q"
-        value="{{ search.terms | escape }}"
-        placeholder="{{ 'general.search.search' | t }}"
-      >
-      <label class="field__label" for="Header-Search">{{ 'general.search.search' | t }}</label>
-      <button class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
-        <span class="svg-wrapper">
-          {{- 'icon-search.svg' | inline_asset_content -}}
-        </span>
-      </button>
-    </div>
-  </form>
 {%- endif -%}
 
       
