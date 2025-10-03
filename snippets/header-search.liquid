@@ -38,9 +38,9 @@
         {%- if settings.predictive_search_enabled -%}
           <predictive-search class="search-modal__form" data-loading-text="{{ 'accessibility.loading' | t }}">
         {%- else -%}
-          {% comment %} <search-form class="search-modal__form"> {% endcomment %}
+          <search-form class="search-modal__form">
         {%- endif -%}
-        <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
+        {% comment %} <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
           <div class="field">
             <input
               class="search__input field__input"
@@ -87,7 +87,7 @@
 
             <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
           {%- endif -%}
-        </form>
+        </form> {% endcomment %}
         {%- if settings.predictive_search_enabled -%}
           </predictive-search>
         {%- else -%}
