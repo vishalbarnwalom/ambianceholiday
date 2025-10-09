@@ -32,64 +32,75 @@
 </nav>
 
 <style>
-.custom-menu {
-  position: relative;
+/* Desktop Only */
+@media (min-width: 1024px) {
+  .custom-menu {
+    display: block;
+    position: relative;
+  }
+
+  .custom-menu .main-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .custom-menu .menu-item {
+    position: relative;
+  }
+
+  .custom-menu .menu-link {
+    text-decoration: none;
+    font-weight: 600;
+    color: #000;
+    display: inline-block;
+    padding: 0.5rem 0;
+  }
+
+  .custom-menu .submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    list-style: none;
+    padding: 0.5rem 0;
+    min-width: 180px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 99;
+  }
+
+  .custom-menu .submenu li {
+    padding: 0.5rem 1rem;
+  }
+
+  .custom-menu .submenu li a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+  }
+
+  .custom-menu .submenu li a:hover {
+    color: #007aff;
+  }
+
+  .custom-menu .menu-item.active .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
 }
 
-.custom-menu .main-menu {
-  display: flex;
-  list-style: none;
-  gap: 2rem;
-  margin: 0;
-  padding: 0;
-}
-
-.custom-menu .menu-item {
-  position: relative;
-}
-
-.custom-menu .menu-link {
-  text-decoration: none;
-  font-weight: 600;
-  color: #000;
-  display: inline-block;
-  padding: 0.5rem 0;
-}
-
-.custom-menu .submenu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: #fff;
-  list-style: none;
-  padding: 0.5rem 0;
-  min-width: 180px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(10px);
-  transition: all 0.3s ease;
-  z-index: 99;
-}
-
-.custom-menu .submenu li {
-  padding: 0.5rem 1rem;
-}
-
-.custom-menu .submenu li a {
-  color: #333;
-  text-decoration: none;
-  display: block;
-}
-
-.custom-menu .submenu li a:hover {
-  color: #007aff;
-}
-
-.custom-menu .menu-item.active .submenu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
+/* Hide on Mobile */
+@media (max-width: 1023px) {
+  .custom-menu {
+    display: none;
+  }
 }
 </style>
 
