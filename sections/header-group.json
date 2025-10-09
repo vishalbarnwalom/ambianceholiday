@@ -41,7 +41,7 @@
       "settings": {
         "logo_position": "middle-left",
         "mobile_logo_position": "center",
-        "menu": "",
+        "menu": "main",
         "menu_type_desktop": "mega",
         "sticky_header_type": "always",
         "show_line_separator": true,
