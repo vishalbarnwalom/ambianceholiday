@@ -1,19 +1,33 @@
 <nav class="custom-menu">
   <ul class="main-menu">
-    {% assign menus = "men,women,24-7" | split: "," %}
-    {% for handle in menus %}
-      {% assign linklist = linklists[handle] %}
-      {% if linklist.links.size > 0 %}
-        <li class="menu-item" data-menu="{{ handle }}">
-          <a href="#" class="menu-link">{{ linklist.title }}</a>
-          <ul class="submenu">
-            {% for link in linklist.links %}
-              <li><a href="{{ link.url }}">{{ link.title }}</a></li>
-            {% endfor %}
-          </ul>
-        </li>
-      {% endif %}
-    {% endfor %}
+    <li class="menu-item">
+      <a href="#" class="menu-link">Men</a>
+      <ul class="submenu">
+        <li><a href="#">T-Shirts</a></li>
+        <li><a href="#">Shirts</a></li>
+        <li><a href="#">Jeans</a></li>
+        <li><a href="#">Shoes</a></li>
+      </ul>
+    </li>
+
+    <li class="menu-item">
+      <a href="#" class="menu-link">Women</a>
+      <ul class="submenu">
+        <li><a href="#">Dresses</a></li>
+        <li><a href="#">Tops</a></li>
+        <li><a href="#">Heels</a></li>
+        <li><a href="#">Accessories</a></li>
+      </ul>
+    </li>
+
+    <li class="menu-item">
+      <a href="#" class="menu-link">24/7</a>
+      <ul class="submenu">
+        <li><a href="#">Customer Support</a></li>
+        <li><a href="#">Track Order</a></li>
+        <li><a href="#">Return Policy</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
