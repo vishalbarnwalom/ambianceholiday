@@ -26,8 +26,16 @@
       <div class="custom-video-overline">{{ section.settings.overline_text }}</div>
     {%- endif -%}
 
-    {%- if section.settings.heading != blank -%}
-      <h2 class="custom-video-heading">{{ section.settings.heading }}</h2>
+    {%- assign heading_text = section.settings.heading | escape -%}
+    {%- assign underline_word = section.settings.underline_word | escape -%}
+
+    {%- if heading_text contains underline_word and underline_word != blank -%}
+      {%- assign svg_span = '<span class="svg-underline">' | append: underline_word | append: '</span>' -%}
+      <h2 class="custom-video-heading">
+        {{ heading_text | replace: underline_word, svg_span }}
+      </h2>
+    {%- else -%}
+      <h2 class="custom-video-heading">{{ heading_text }}</h2>
     {%- endif -%}
 
     {%- if section.settings.description != blank -%}
@@ -46,12 +54,33 @@
         </a>
       {%- endif -%}
     </div>
-         <div class="scroll" id="scrollArrow">
-            <p>Scroll to explore</p>
-                  <img src="https://cdn.shopify.com/s/files/1/0666/0866/0591/files/darrow.svg?v=1758528002" alt="down arrow">
-        </div>
+
+    <div class="scroll" id="scrollArrow">
+      <p>Scroll to explore</p>
+      <img src="https://cdn.shopify.com/s/files/1/0666/0866/0591/files/darrow.svg?v=1758528002" alt="down arrow">
+    </div>
   </div>
 </div>
+
+{% style %}
+.svg-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.svg-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 8px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='8' viewBox='0 0 100 8' preserveAspectRatio='none'><path d='M0,6 C20,10 80,2 100,6' stroke='{{ section.settings.underline_color | url_encode }}' stroke-width='2' fill='none'/></svg>");
+  pointer-events: none;
+}
+{% endstyle %}
 
 {% schema %}
 {
@@ -88,6 +117,18 @@
       "id": "heading",
       "label": "Heading",
       "default": "Bespoke Mauritian Experience"
+    },
+    {
+      "type": "text",
+      "id": "underline_word",
+      "label": "Word to underline",
+      "info": "Enter the word from heading to underline with SVG"
+    },
+    {
+      "type": "color",
+      "id": "underline_color",
+      "label": "Underline Color",
+      "default": "#ff0000"
     },
     {
       "type": "richtext",
