@@ -47,20 +47,7 @@
     >
       {%- unless section.settings.heading == blank -%}
         <div class="title-wrapper title-wrapper--no-top-margin{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-        {%- assign heading_text = section.settings.heading | escape -%}
-{%- assign word_to_underline = section.settings.highlight_word | escape -%}
-
-{%- if heading_text contains word_to_underline and word_to_underline != blank -%}
-  {%- assign highlighted = '<span class="svg-underline">' | append: word_to_underline | append: '</span>' -%}
-  <h2 class="title inline-richtext {{ section.settings.heading_size }}">
-    {{ heading_text | replace: word_to_underline, highlighted }}
-  </h2>
-{%- else -%}
-  <h2 class="title inline-richtext {{ section.settings.heading_size }}">
-    {{ heading_text }}
-  </h2>
-{%- endif -%}
-
+          <h2 class="title inline-richtext {{ section.settings.heading_size }}">{{ section.settings.heading }}</h2>
         </div>
       {%- endunless -%}
     </div>
@@ -142,18 +129,6 @@
     "groups": ["header", "footer"]
   },
   "settings": [
-    {
-  "type": "text",
-  "id": "highlight_word",
-  "label": "Word to underline"
-},
-{
-  "type": "color",
-  "id": "underline_color",
-  "label": "Underline color",
-  "default": "#ff0000"
-},
-
     {
       "type": "inline_richtext",
       "id": "heading",
