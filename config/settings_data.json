@@ -154,31 +154,13 @@
           "preselect_variant": true
         }
       },
-      "7870687481494312845": {
-        "type": "shopify://apps/wishlist-hero/blocks/app-embed/a9a5079b-59e8-47cb-b659-ecf1c60b9b72",
-        "disabled": false,
-        "settings": {
-          "additionalWLButtonCssClasses": "",
-          "additionalWLCartBubbleCssClasses": ""
-        }
-      },
       "319724205969189013": {
         "type": "shopify://apps/hulk-form-builder/blocks/app-embed/b6b8dd14-356b-4725-a4ed-77232212b3c3",
         "disabled": false,
         "settings": {}
       },
-      "2997326909215316540": {
-        "type": "shopify://apps/ang-extra-menu/blocks/embed-app/ec904fae-fd98-4243-8db5-01051f1af95f",
-        "disabled": false,
-        "settings": {}
-      },
-      "14006543868794036723": {
-        "type": "shopify://apps/ang-extra-menu/blocks/metadata/ec904fae-fd98-4243-8db5-01051f1af95f",
-        "disabled": false,
-        "settings": {}
-      },
-      "9901917232353999808": {
-        "type": "shopify://apps/buddha-mega-menu-navigation/blocks/megamenu/dbb4ce56-bf86-4830-9b3d-16efbef51c6f",
+      "9365423049038898845": {
+        "type": "shopify://apps/tawk-to-live-chat/blocks/widget-embed-code/91169e75-f163-40ce-90e0-9059f3c9b772",
         "disabled": false,
         "settings": {}
       }
